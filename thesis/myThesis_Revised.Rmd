@@ -1,14 +1,15 @@
 ---
-title: My Thesis
-author: Drew Heasman
-output:
-  html_document: null
+title: "My Thesis"
+author: "Drew Heasman"
 bibliography: bibliography/bibliography.bib
-abstract: >-
-  This is a sample thesis that we're using to showcase some practical
-  applications of integrated documents.
-keywords: 'thesis, science, stuff'
-linenumbers: true
+output:
+  pdf_document: home\R\ThesisIsCode\ThesisIsCode\thesis\thesis_template.tex
+  html_document: null
+  word_document: default
+linenumbers: yes
+keywords: thesis, science, stuff
+abstract: This is a sample thesis that we're using to showcase some practical applications
+  of integrated documents.
 ---
 
 # Our Sample Thesis
@@ -33,11 +34,12 @@ When you're working on your thesis you're probably loading some data, and then d
 
 We did some work looking at Github repositories earlier, and added information to a Google spreadsheet. I've downloaded the data into a CSV file in the `data/input` directory of this project.
 
-```{r}
+```{r readData}
+library(assertthat)
 table <- read.csv('data/input/GitHubRepositories.csv')
 ```
 
-Once the table is read in by the code block above we can say some things about it, for example, I can let you know that there are `r nrow(table)` rows in the table. I wanted to know how many of the tables had `README` files. There are `r sum(table[,3] == 'yes', na.rm=TRUE)` README files, out of `r sum(table[,3] == '')` repositories sampled. **The fact that we sampled no repositories at all is pretty telling.**
+Once the table is read in by the code block above we can say some things about it, for example, I can let you know that there are `r nrow(table)` rows in the table. I wanted to know how many of the tables had `README` files. There are `r sum(table[,3] == 'yes', na.rm=TRUE)` README files, out of `r sum(table[,3] == '')` repositories sampled.
 
 ```{r}
 plot(factor(table[,3]))
@@ -55,7 +57,7 @@ That URL leads you to a help page of sorts. I just want to do a really simple qu
 
 ```{r}
 library(jsonlite)
-climate <- jsonlite::fromJSON('https://geodeepdive.org/api/snippets?term=climut&clean&full_results')
+climate <- jsonlite::fromJSON('https://geodeepdive.org/api/snippets?term=logic&clean&full_results')
 ```
 
 We can look at the result online. The only thing I want to point out is that there are only `r climate[[1]]$hits` results, meaning less than 300 papers about climate. Shocking!
