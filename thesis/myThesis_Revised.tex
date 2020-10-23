@@ -1,0 +1,279 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={My Thesis},
+  pdfauthor={Drew Heasman},
+  pdfkeywords={thesis, science, stuff},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry sp
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set line spacing
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#3\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc} % for \widthof, \maxof
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\maxof{\widthof{#1}}{\csllabelwidth}}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\title{My Thesis}
+\author{Drew Heasman}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This is a sample thesis that we're using to showcase some practical
+applications of integrated documents.
+\end{abstract}
+
+\hypertarget{our-sample-thesis}{%
+\section{Our Sample Thesis}\label{our-sample-thesis}}
+
+\hypertarget{knitting-your-thesis}{%
+\subsection{Knitting your Thesis}\label{knitting-your-thesis}}
+
+Open this \texttt{Rmd} file in RMarkdown. It should all be ready to go,
+to turn it into a cool \texttt{HTML} document. To do that, look at the
+RStudio toolbar and click the \texttt{knit} button.
+
+You can also knit (or render) your RMarkdown documents using the command
+line. There are good reasons for doing this, and cool tricks you can try
+(see the Tips \& Tricks later in the workshop). To do that, go to the
+folder that your RMarkdown document is in and type in the command:
+
+\begin{verbatim}
+Rscript -e "rmarkdown::render('filename.Rmd')"
+\end{verbatim}
+
+No need to try it here, but just wanted to mention it :)
+
+\hypertarget{integrating-code}{%
+\subsection{Integrating Code}\label{integrating-code}}
+
+When you're working on your thesis you're probably loading some data,
+and then doing some analysis. We're going to show a couple ways of doing
+it, but we're also going to look at how to integrate that code directly
+into your text.
+
+\hypertarget{data-import}{%
+\subsubsection{Data Import}\label{data-import}}
+
+We did some work looking at Github repositories earlier, and added
+information to a Google spreadsheet. I've downloaded the data into a CSV
+file in the \texttt{data/input} directory of this project.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{table }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{\textquotesingle{}data/input/GitHubRepositories.csv\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Once the table is read in by the code block above we can say some things
+about it, for example, I can let you know that there are 200 rows in the
+table. I wanted to know how many of the tables had \texttt{README}
+files. There are 22 README files, out of 151 repositories sampled.
+\textbf{The fact that we sampled no repositories at all is pretty
+telling.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(}\FunctionTok{factor}\NormalTok{(table[,}\DecValTok{3}\NormalTok{]))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{myThesis_Revised_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\hypertarget{dynamic-data}{%
+\subsubsection{Dynamic Data}\label{dynamic-data}}
+
+Sometimes we're working with data that comes from the World Wide Web.
+The Internet is basically a series of tubes. Some research databases or
+online tools have packages that allow you to obtain data directly
+through in internet connection. \href{http://geodeepdive.org}{xDeepDive}
+is a tool that has harvested full text from hundreds of thousands of
+journal publications. We can connect to it using a URL:
+
+\begin{verbatim}
+https://geodeepdive.org/api/
+\end{verbatim}
+
+That URL leads you to a help page of sorts. I just want to do a really
+simple query here. How many papers talk about \emph{climate}?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(jsonlite)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'jsonlite' was built under R version 3.6.3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{climate }\OtherTok{\textless{}{-}}\NormalTok{ jsonlite}\SpecialCharTok{::}\FunctionTok{fromJSON}\NormalTok{(}\StringTok{\textquotesingle{}https://geodeepdive.org/api/snippets?term=climut\&clean\&full\_results\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+We can look at the result online. The only thing I want to point out is
+that there are only 260 results, meaning less than 300 papers about
+climate. Shocking!
+
+\hypertarget{templates}{%
+\section{Templates}\label{templates}}
+
+Most universities and departments make a Word or latex template
+available for theses. For example, the
+\href{templates/thesistemplate.docx}{template in the \texttt{templates}
+folder} is provided by
+\href{https://www.lib.sfu.ca/help/publish/thesis/templates}{Simon Fraser
+University}.
+
+\hypertarget{bibliography}{%
+\section{Bibliography}\label{bibliography}}
+
+Pandoc (and by extension, RMarkdown) can support the use of a
+bibliography in \href{http://www.bibtex.org/}{Bibtex format}. These
+references can be rendered into a number of different formats using an
+XML-type file called the \href{https://citationstyles.org/}{Citation
+Style Language}, or CSL. These files define how the reference is
+rendered and referenced in text. You can see a full list of available
+formats (for a large number of journals) in the
+\href{https://github.com/citation-style-language/styles}{CSL Github
+styles repository}.
+
+If I wanted to cite a paper, for example, the winner of an IgNobel prize
+for making feces knives (Eren et al. 2019), I could simply add an in
+text citation to my bibliography file. We'll edit this further once we
+get used to using \texttt{git} workflows.
+
+There's some great information about
+\href{https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html}{using
+RMarkdown citations \& bibliographies} on the RStudio website.
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-eren2019experimental}{}%
+Eren, Metin I, Michelle R Bebber, James D Norris, Alyssa Perrone, Ashley
+Rutkoski, Michael Wilson, and Mary Ann Raghanti. 2019. {``Experimental
+Replication Shows Knives Manufactured from Frozen Human Feces Do Not
+Work.''} \emph{Journal of Archaeological Science: Reports} 27: 102002.
+
+\end{CSLReferences}
+
+\end{document}

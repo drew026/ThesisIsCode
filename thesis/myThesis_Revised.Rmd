@@ -3,7 +3,7 @@ title: "My Thesis"
 author: "Drew Heasman"
 bibliography: bibliography/bibliography.bib
 output:
-  pdf_document: home\R\ThesisIsCode\ThesisIsCode\thesis\thesis_template.tex
+  pdf_document: thesis_template.tex
   html_document: null
   word_document: default
 linenumbers: yes
