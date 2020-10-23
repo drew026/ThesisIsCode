@@ -1,6 +1,6 @@
 ---
 title: My Thesis
-author: You
+author: Drew Heasman
 output:
   html_document: null
 bibliography: bibliography/bibliography.bib
@@ -34,7 +34,7 @@ When you're working on your thesis you're probably loading some data, and then d
 We did some work looking at Github repositories earlier, and added information to a Google spreadsheet. I've downloaded the data into a CSV file in the `data/input` directory of this project.
 
 ```{r}
-table <- read.csv('data/input/GitHubRepos.csv')
+table <- read.csv('data/input/GitHubRepositories.csv')
 ```
 
 Once the table is read in by the code block above we can say some things about it, for example, I can let you know that there are `r nrow(table)` rows in the table. I wanted to know how many of the tables had `README` files. There are `r sum(table[,3] == 'yes', na.rm=TRUE)` README files, out of `r sum(table[,3] == '')` repositories sampled. **The fact that we sampled no repositories at all is pretty telling.**
